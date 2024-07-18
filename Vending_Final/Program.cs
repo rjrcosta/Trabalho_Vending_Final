@@ -45,11 +45,13 @@ namespace Vending_Machine
 
         static void areaAdmin(string[,] menu)
         {
-            int passwordFlag = 0;
             int adminFlag = 0;
+            int passwordFlag = 0;
+            int modProdutosFlag = 0;
 
             while (adminFlag == 0)
             {
+                
 
                 Console.WriteLine("Entrar na área de Administrador? ");
                 Console.WriteLine("");
@@ -60,21 +62,19 @@ namespace Vending_Machine
 
                 if (admin == "S" || admin == "s")
                 {
-
+                    Console.Clear();
                     while (passwordFlag == 0)
                     {
                         passwordFlag = adminPassword();  //Função password para validar adinistrador
 
                     }
-
+                    
                     if (passwordFlag == 1)
                     {
                         //Caso seja admin Permite Introdução de Nome de bebidas e Preço com validação de valores -------------------------------------------------------------
                         Console.Clear();
                         tabelaProdutosModificada(menu);
                     }
-                    Console.Clear();
-
                 }
                 else if (admin == "N" || admin == "n")
                 {
@@ -88,9 +88,41 @@ namespace Vending_Machine
                     Console.WriteLine("Caractere inválido");
                     Console.WriteLine("");
                 }
+            }
+        }
 
+        //************************************************************* Password **********************************************************************
+        static int adminPassword()
+        {
+            
+            Console.WriteLine("");
+            Console.WriteLine("Introduza Password ");
+            Console.WriteLine("[X] para sair");
+            Console.WriteLine("");
+
+            string password = Console.ReadLine();
+
+
+            if (password == "1234")
+            {
+                Console.Clear();
+                return 1;
+            }
+            else if (password == "X" || password == "x")
+            {
+                Console.Clear();
+                return 2;
 
             }
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("");
+                Console.WriteLine("Password errada. Tente novamente");
+                Console.WriteLine("");
+                return 0;
+            }
+
 
         }
 
@@ -103,7 +135,7 @@ namespace Vending_Machine
 
             for (int i = 0; i < menu.GetLength(0); i++)
             {
-                Console.WriteLine($"{menu[i, 1]}\t{menu[i,2]}");
+                Console.WriteLine(String.Format("{0,-2}  {1,-5}  {2,15}", menu[i, 0], menu[i, 1], menu[i, 2]));
             }
 
             Console.WriteLine("");
@@ -123,7 +155,7 @@ namespace Vending_Machine
                     Console.Clear ();
                     for (int i = 0; i < menu.GetLength(0); i++)
                     {
-                        Console.WriteLine($"{menu[i, 1]}\t{menu[i, 2]}");
+                        Console.WriteLine(String.Format("{0,-2}  {1,-5}  {2,15}", menu[i, 0], menu[i, 1], menu[i, 2]));
                     }
 
                     for (int i = 0; i < menu.GetLength(0); i++)
@@ -136,6 +168,7 @@ namespace Vending_Machine
                         menu[i, 2] = validacaoDouble(menu[i, 2]);
                     }
 
+                    Console.Clear();
                     Console.WriteLine("************************ Tabela Produtos *********************************");
                     Console.WriteLine("");
 
@@ -145,8 +178,9 @@ namespace Vending_Machine
                         Console.WriteLine(menu[i, 0] + " " + (menu[i, 1] + " " + (menu[i, 2] + " euros")));
 
                     }
-
+                    Console.WriteLine("");
                     Console.WriteLine("Quer alterar Novamente?");
+                    Console.WriteLine("");
                     Console.WriteLine("[T] para Todos ");
                     Console.WriteLine("[I] Alterar Produto individual");
                     Console.WriteLine("[X] Cancelar");
@@ -159,18 +193,19 @@ namespace Vending_Machine
                     Console.Clear();
                     for (int i = 0; i < menu.GetLength(0); i++)
                     {
-                        Console.WriteLine($"{menu[i, 1]}\t{menu[i, 2]}");
+                        Console.WriteLine(String.Format("{0,-2}  {1,-5}  {2,15}", menu[i, 0], menu[i, 1], menu[i, 2]));
                     }
 
                     do //loop validação opçoes entre 1 a 6
                     {
+                        Console.WriteLine("");
                         Console.WriteLine("Que produto quer alterar. Selecione [1] a [6]");
                         string index = Console.ReadLine();
                         indexint = validacaoInt(index) - 1; //Validação de inteiros
 
                     } while (indexint < 0 || indexint > 5);
 
-
+                    Console.WriteLine("");
                     Console.WriteLine("Insira o novo nome do produto");
                     menu[indexint, 1] = Console.ReadLine();
 
@@ -182,7 +217,7 @@ namespace Vending_Machine
                     Console.Clear();
                     for (int i = 0; i < menu.GetLength(0); i++)
                     {
-                        Console.WriteLine($"{menu[i, 1]}\t{menu[i, 2]}");
+                        Console.WriteLine(String.Format("{0,-2}  {1,-5}  {2,15}", menu[i, 0], menu[i, 1], menu[i, 2]));
                     }
 
                     Console.WriteLine("");
@@ -195,11 +230,20 @@ namespace Vending_Machine
                 }
                 else if (alterartodos == "X" || alterartodos == "x")
                 {
+                    Console.Clear();
                     alterarTodosLoop = 1;
                 }
 
                 else
                 {
+                    Console.Clear();
+                  
+                    for (int i = 0; i < menu.GetLength(0); i++)
+                    {
+                        Console.WriteLine(String.Format("{0,-2}  {1,-5}  {2,15}", menu[i, 0], menu[i, 1], menu[i, 2]));
+                    }
+                    Console.WriteLine("");
+                    Console.WriteLine("* Opção inválida * ");
                     Console.WriteLine("");
                     Console.WriteLine("[T] para Todos ");
                     Console.WriteLine("[I] Alterar Produto individual");
@@ -207,9 +251,7 @@ namespace Vending_Machine
                     alterartodos = Console.ReadLine();
                     //manter no loop while alterarTodosLoop
                 }
-
             }
-
         }
 
         //********************************************************* Validação de Inteiros *************************************************************
@@ -258,38 +300,7 @@ namespace Vending_Machine
             return y;
         }
 
-        //************************************************************* Password **********************************************************************
-        static int adminPassword()
-        {
-
-            Console.WriteLine("");
-            Console.WriteLine("Introduza Password ");
-            Console.WriteLine("[X] para sair");
-            Console.WriteLine("");
-
-            string password = Console.ReadLine();
-
-
-            if (password == "1234")
-            {
-                return 1;
-
-            }
-            else if (password == "X" || password == "x")
-            {
-                return 2;
-                Console.WriteLine("");
-            }
-            else
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Password errada. Tente novamente");
-                Console.WriteLine("");
-                return 0;
-            }
-
-
-        }
+        
 
         //************************************************************* Menu Introduza dinheiro ******************************************************
 
@@ -317,12 +328,12 @@ namespace Vending_Machine
             // ----------------------------------------------------- MATRIZ DE PRODUTOS ------------------------------------------------------------------------------------------
             string[,] menu =
             {
-                        { "1","Cola", "\t 1.20" },
-                        { "2","Água","\t 1.30" },
-                        { "3","Sumo", "\t 1.50" },
-                        { "4", "Café", "\t 1.20"},
-                        { "5", "Vinho", "\t 1.30" },
-                        { "6","Cerveja", "\t 1" },
+                        { "1","Cola", " 1.20" },
+                        { "2","Água"," 1.30" },
+                        { "3","Sumo", " 1.50" },
+                        { "4", "Café", " 1.20"},
+                        { "5", "Vinho", " 1.30" },
+                        { "6","Fanta", "1" },
                         };
 
 
@@ -716,12 +727,19 @@ namespace Vending_Machine
                 Console.WriteLine("------------------------------------------ Volte Sempre ----------------------------------------------");
                 Console.WriteLine("");
 
+                // Timer guia para usuario --------------------------
+                //for (int i = 10; i > 0; i--)
+                //{
+                //    Console.WriteLine(i);
+                //    System.Threading.Thread.Sleep(1000);
+                //    Console.Clear();
+                //}
 
-                System.Threading.Thread.Sleep(10000);
                 Console.Clear();
 
                 avancaCompraValor = 1;
                 voltaInicio = 0;
+                
             }
 
         }
