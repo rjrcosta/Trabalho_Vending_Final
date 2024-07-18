@@ -319,6 +319,7 @@ namespace Vending_Machine
         }
 
 
+        
 
         //*********************************************************************************************************************************************
         //************************************************************* PROGRAMA **********************************************************************
@@ -358,8 +359,8 @@ namespace Vending_Machine
                 string password = "";
                 int passwordFlag = 0;
                 int adminFlag = 0;
-                double valorTotal = 0;
-                double troco = 0;
+                decimal valorTotal = 0;
+                decimal troco = 0;
                 string codigo = "";
                 int quantidade = 0;
                 double valor = 0;
@@ -371,7 +372,7 @@ namespace Vending_Machine
                 string alterartodos = "";
                 int alterarTodosLoop = 0;
 
-                double valorParcial = 0;
+                decimal valorParcial = 0;
                 string valorParcialString = "";
                 
                 double preco = 1;
@@ -470,7 +471,7 @@ namespace Vending_Machine
                         {
                             
                             Console.Clear();
-                            valorParcial = double.Parse(valorParcialString, CultureInfo.InvariantCulture);
+                            valorParcial = decimal.Parse(valorParcialString, CultureInfo.InvariantCulture);
                             valorParcial = Math.Round(valorParcial, 2);
 
                             valorTotal = Math.Round((valorTotal + valorParcial), 2);
@@ -544,18 +545,18 @@ namespace Vending_Machine
                                     Console.WriteLine("Escolheu " + menu[0, 1]);
                                     Console.WriteLine("Preço " + menu[0, 2] + " euros");
 
-                                    if (valorTotal < Convert.ToDouble(menu[0, 2], CultureInfo.InvariantCulture))
+                                    if (valorTotal < Convert.ToDecimal(menu[0, 2], CultureInfo.InvariantCulture))
                                     {
                                         Console.WriteLine("O seu salde é de " + valorTotal + " euros que é insuficiente para esta compra");
                                         Console.WriteLine("Introduza mais valor");
-                                        valorParcial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                                        valorParcial = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                                         multiCompra = 1;
                                         valorInsuf = 0;
                                     }
                                     else
                                     {
 
-                                        valorTotal = valorTotal - (Convert.ToDouble(menu[0, 2], CultureInfo.InvariantCulture));
+                                        valorTotal = valorTotal - (Convert.ToDecimal(menu[0, 2], CultureInfo.InvariantCulture));
                                         valorTotal = Math.Round(valorTotal, 2);
                                         Console.WriteLine("O seu saldo é de " + valorTotal);
 
@@ -565,17 +566,17 @@ namespace Vending_Machine
                                 case 2:
                                     Console.WriteLine("Escolheu " + menu[1, 1]);
                                     Console.WriteLine("Preço " + menu[1, 2] + " euros");
-                                    if (valorTotal < Convert.ToDouble(menu[1, 2], CultureInfo.InvariantCulture))
+                                    if (valorTotal < Convert.ToDecimal(menu[1, 2], CultureInfo.InvariantCulture))
                                     {
                                         Console.WriteLine("O seu salde é de " + valorTotal + " euros que é insuficiente para esta compra");
                                         Console.WriteLine("Introduza mais valor");
-                                        valorParcial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                                        valorParcial = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                                         multiCompra = 1;
                                         valorInsuf = 0;
                                     }
                                     else
                                     {
-                                        valorTotal = valorTotal - Convert.ToDouble(menu[1, 2], CultureInfo.InvariantCulture);
+                                        valorTotal = valorTotal - Convert.ToDecimal(menu[1, 2], CultureInfo.InvariantCulture);
                                         valorTotal = Math.Round(valorTotal, 2);
                                         Console.WriteLine("O seu saldo é de " + valorTotal);
 
@@ -584,17 +585,17 @@ namespace Vending_Machine
                                 case 3:
                                     Console.WriteLine("Escolheu " + menu[2, 1]);
                                     Console.WriteLine("Preço " + menu[2, 2] + " euros");
-                                    if (valorTotal < Convert.ToDouble(menu[2, 2], CultureInfo.InvariantCulture))
+                                    if (valorTotal < Convert.ToDecimal(menu[2, 2], CultureInfo.InvariantCulture))
                                     {
                                         Console.WriteLine("O seu salde é de " + valorTotal + " euros que é insuficiente para esta compra");
                                         Console.WriteLine("Introduza mais valor");
-                                        valorParcial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                                        valorParcial = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                                         multiCompra = 1;
                                         valorInsuf = 0;
                                     }
                                     else
                                     {
-                                        valorTotal = valorTotal - Convert.ToDouble(menu[2, 2], CultureInfo.InvariantCulture);
+                                        valorTotal = valorTotal - Convert.ToDecimal(menu[2, 2], CultureInfo.InvariantCulture);
                                         valorTotal = Math.Round(valorTotal, 2);
                                         Console.WriteLine("O seu saldo é de " + valorTotal);
 
@@ -603,17 +604,17 @@ namespace Vending_Machine
                                 case 4:
                                     Console.WriteLine("Escolheu " + menu[3, 1]);
                                     Console.WriteLine("Preço " + menu[3, 2] + " euros");
-                                    if (valorTotal < Convert.ToDouble(menu[3, 2], CultureInfo.InvariantCulture))
+                                    if (valorTotal < Convert.ToDecimal(menu[3, 2], CultureInfo.InvariantCulture))
                                     {
                                         Console.WriteLine("O seu salde é de " + valorTotal + " euros que é insuficiente para esta compra");
                                         Console.WriteLine("Introduza mais valor");
-                                        valorParcial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                                        valorParcial = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                                         multiCompra = 1;
                                         valorInsuf = 0;
                                     }
                                     else
                                     {
-                                        valorTotal = valorTotal - Convert.ToDouble(menu[3, 2], CultureInfo.InvariantCulture);
+                                        valorTotal = valorTotal - Convert.ToDecimal(menu[3, 2], CultureInfo.InvariantCulture);
                                         valorTotal = Math.Round(valorTotal, 2);
                                         Console.WriteLine("O seu saldo é de " + valorTotal);
 
@@ -622,17 +623,17 @@ namespace Vending_Machine
                                 case 5:
                                     Console.WriteLine("Escolheu " + menu[4, 1]);
                                     Console.WriteLine("Preço " + menu[4, 2] + " euros");
-                                    if (valorTotal < Convert.ToDouble(menu[4, 2], CultureInfo.InvariantCulture))
+                                    if (valorTotal < Convert.ToDecimal(menu[4, 2], CultureInfo.InvariantCulture))
                                     {
                                         Console.WriteLine("O seu salde é de " + valorTotal + " euros que é insuficiente para esta compra");
                                         Console.WriteLine("Introduza mais valor");
-                                        valorParcial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                                        valorParcial = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                                         multiCompra = 1;
                                         valorInsuf = 0;
                                     }
                                     else
                                     {
-                                        valorTotal = valorTotal - Convert.ToDouble(menu[4, 2], CultureInfo.InvariantCulture);
+                                        valorTotal = valorTotal - Convert.ToDecimal(menu[4, 2], CultureInfo.InvariantCulture);
                                         valorTotal = Math.Round(valorTotal, 2);
                                         Console.WriteLine("O seu saldo é de " + valorTotal);
 
@@ -641,18 +642,18 @@ namespace Vending_Machine
                                 case 6:
                                     Console.WriteLine("Escolheu " + menu[5, 1]);
                                     Console.WriteLine("Preço " + menu[5, 2] + " euros");
-                                    if (valorTotal < Convert.ToDouble(menu[5, 2], CultureInfo.InvariantCulture))
+                                    if (valorTotal < Convert.ToDecimal(menu[5, 2], CultureInfo.InvariantCulture))
                                     {
                                         Console.WriteLine("O seu salde é de " + valorTotal + " euros que é insuficiente para esta compra");
                                         Console.WriteLine("Introduza mais valor");
-                                        valorParcial = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                                        valorParcial = decimal.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
                                         multiCompra = 1;
                                         valorInsuf = 0;
 
                                     }
                                     else
                                     {
-                                        valorTotal = valorTotal - Convert.ToDouble(menu[5, 2], CultureInfo.InvariantCulture);
+                                        valorTotal = valorTotal - Convert.ToDecimal(menu[5, 2], CultureInfo.InvariantCulture);
                                         valorTotal = Math.Round(valorTotal, 2);
                                         Console.WriteLine("O seu saldo é de " + valorTotal);
 
@@ -677,63 +678,63 @@ namespace Vending_Machine
                     }
                 }
 
+               
 
-                //Cálculo do Troco
+                    //Cálculo do Troco
 
-                int[] contadores = new int[6];
-                double[] valores = { 5.0, 2.0, 1.0, 0.5, 0.2, 0.1 };
+                    int[] contadores = new int[6];
+                    decimal[] valores = { 5m, 2m, 1m, 0.5m, 0.2m, 0.1m };
 
-                // Loop while para subtrair o valor correspondente de valorTotal e incrementar o contador apropriado.
-                for (int i = 0; i < valores.Length; i++)
-                {
-                    while (valorTotal >= valores[i])
+                    // Loop while para subtrair o valor correspondente de valorTotal e incrementar o contador apropriado.
+                    for (int j = 0; j < valores.Length; j++)
                     {
-                        valorTotal = valorTotal - valores[i];
-                        contadores[i]++;
+                        while (valorTotal >= valores[j])
+                        {
+                            valorTotal = valorTotal - valores[j];
+                            contadores[j]++;
+                        }
+                        valorTotal = Math.Round(valorTotal, 2);
                     }
+
+                    // Atribuição dos contadores e calculo do troco
+
+                    int contador5 = contadores[0];
+                    int contador2 = contadores[1];
+                    int contador1 = contadores[2];
+                    int contador05 = contadores[3];
+                    int contador02 = contadores[4];
+                    int contador01 = contadores[5];
+
+                    troco = contador5 * valores[0] + contador2 * valores[1] + contador1 * valores[2] + contador05 * valores[3] + contador02 * valores[4] + contador01 * valores[5];
+                    troco = Math.Round(troco, 2);
                     valorTotal = Math.Round(valorTotal, 2);
+
+                    Console.WriteLine("----------------------------- Relatório Final ----------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine("");
+                    Console.WriteLine("Recebeu " + troco + " Euros");
+                    Console.WriteLine("Foram devolvidas:");
+                    Console.WriteLine(contador5 + " nota(s) de 5 euros");
+                    Console.WriteLine(contador2 + " moeda(s) de 2 euros");
+                    Console.WriteLine(contador1 + " moeda(s) de 1 euro");
+                    Console.WriteLine(contador05 + " moeda(s) de 50 centimos");
+                    Console.WriteLine(contador02 + " moedas de 20 centimos");
+                    Console.WriteLine(contador01 + " moedas de 10 centimos");
+                    Console.WriteLine("");
+                    Console.WriteLine("O seu saldo é de " + valorTotal + " euros");
+                    Console.WriteLine("Volte sempre");
+                    Console.WriteLine("");
+                    Console.WriteLine("-------------------------------------- Obrigado pela Compra ------------------------------------------");
+                    Console.WriteLine("");
+                    Console.WriteLine("------------------------------------------ Volte Sempre ----------------------------------------------");
+                    Console.WriteLine("");
+
+                //Timer guia para usuario --------------------------
+                for (int i = 10; i > 0; i--)
+                {
+                    Console.Write(i + "..");
+                    System.Threading.Thread.Sleep(1000);
                 }
-
-                // Atribuição dos contadores e calculo do troco
-
-                int contador5 = contadores[0];
-                int contador2 = contadores[1];
-                int contador1 = contadores[2];
-                int contador05 = contadores[3];
-                int contador02 = contadores[4];
-                int contador01 = contadores[5];
-
-                troco = contador5 * 5 + contador2 * 2 + contador1 * 1 + contador05 * 0.5 + contador02 * 0.2 + contador01 * 0.1;
-                troco = Math.Round(troco, 2);
-                valorTotal = Math.Round(valorTotal, 2);
-
-                Console.WriteLine("----------------------------- Relatório Final ----------------------------------------");
-                Console.WriteLine("");
-                Console.WriteLine("");
-                Console.WriteLine("Recebeu " + troco + " Euros");
-                Console.WriteLine("Foram devolvidas:");
-                Console.WriteLine(contador5 + " nota(s) de 5 euros");
-                Console.WriteLine(contador2 + " moeda(s) de 2 euros");
-                Console.WriteLine(contador1 + " moeda(s) de 1 euro");
-                Console.WriteLine(contador05 + " moeda(s) de 50 centimos");
-                Console.WriteLine(contador02 + " moedas de 20 centimos");
-                Console.WriteLine(contador01 + " moedas de 10 centimos");
-                Console.WriteLine("");
-                Console.WriteLine("O seu saldo é de " + valorTotal + " euros");
-                Console.WriteLine("Volte sempre");
-                Console.WriteLine("");
-                Console.WriteLine("-------------------------------------- Obrigado pela Compra ------------------------------------------");
-                Console.WriteLine("");
-                Console.WriteLine("------------------------------------------ Volte Sempre ----------------------------------------------");
-                Console.WriteLine("");
-
-                // Timer guia para usuario --------------------------
-                //for (int i = 10; i > 0; i--)
-                //{
-                //    Console.WriteLine(i);
-                //    System.Threading.Thread.Sleep(1000);
-                //    Console.Clear();
-                //}
 
                 Console.Clear();
 
