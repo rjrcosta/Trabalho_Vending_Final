@@ -1,0 +1,15 @@
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\bin\Debug\net8.0\Vending_Final.exe
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\bin\Debug\net8.0\Vending_Final.deps.json
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\bin\Debug\net8.0\Vending_Final.runtimeconfig.json
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\bin\Debug\net8.0\Vending_Final.dll
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\bin\Debug\net8.0\Vending_Final.pdb
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.AssemblyInfoInputs.cache
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.AssemblyInfo.cs
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.csproj.CoreCompileInputs.cache
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.sourcelink.json
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.dll
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\refint\Vending_Final.dll
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.pdb
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\Vending_Final.genruntimeconfig.cache
+C:\Users\Cesae\Dropbox\PROGRAMAÇÃO ESTRUTURADA\Trabalhos\Trabalho_Vending_Final\Vending_Final\obj\Debug\net8.0\ref\Vending_Final.dll

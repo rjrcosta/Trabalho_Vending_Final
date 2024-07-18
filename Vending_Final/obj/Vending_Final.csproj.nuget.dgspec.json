@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj": {}
+    "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj": {
+    "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
+        "projectUniqueName": "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
         "projectName": "Vending_Final",
-        "projectPath": "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
+        "projectPath": "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
         "packagesPath": "C:\\Users\\Cesae\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\obj\\",
         "projectStyle": "PackageReference",
