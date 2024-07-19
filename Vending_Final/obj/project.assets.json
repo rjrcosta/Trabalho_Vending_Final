@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
+      "projectUniqueName": "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
       "projectName": "Vending_Final",
-      "projectPath": "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
+      "projectPath": "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\Vending_Final.csproj",
       "packagesPath": "C:\\Users\\Cesae\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Cesae\\Dropbox\\PROGRAMAÇÃO ESTRUTURADA\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\obj\\",
+      "outputPath": "C:\\Users\\Cesae\\Dropbox\\Programação estruturada\\Trabalhos\\Trabalho_Vending_Final\\Vending_Final\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Cesae\\AppData\\Roaming\\NuGet\\NuGet.Config",
